@@ -1,0 +1,43 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game {
+  display: flex;
+  flex-direction: column; /* Или 'row', в зависимости от предпочтений расположения */
+  align-items: center; /* Центрирование дочерних элементов по горизонтали */
+  justify-content: center;
+  gap: 20px;
+}
+
+.deck,
+.card {
+  position: relative;
+  width: 240px;
+  height: 360px;
+  background-size: cover;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.open-cards {
+  position: relative;
+  width: 240px; /* Ширина равна одной карте, так как карты будут накладываться друг на друга */
+  height: 360px;
+}
+
+.card {
+  position: absolute; /* Каждая карта абсолютно позиционирована внутри .open-cards */
+  top: 0;
+  left: 0;
+}
